@@ -1,4 +1,4 @@
-package main
+package terminalimage
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ import (
 	_ "golang.org/x/image/webp"
 )
 
-func main() {
+func Example() {
 	str, err := ImageToString("img.jfif", 20, true)
 	if err != nil {
 		panic(err)
