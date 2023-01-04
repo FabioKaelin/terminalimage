@@ -1,1 +1,1 @@
-# terminalimage
+# TerminalImage
