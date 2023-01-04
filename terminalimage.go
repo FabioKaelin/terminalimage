@@ -1,7 +1,6 @@
 package terminalimage
 
 import (
-	"fmt"
 	"image"
 	"strings"
 
@@ -15,17 +14,17 @@ import (
 	_ "golang.org/x/image/webp"
 )
 
-func Example() {
-	str, err := ImageToString("img.jfif", 20, true)
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println(str)
-}
+// func init() {
+// 	fmt.Println("Simple interest package initialized")
+// }
 
-func init() {
-	fmt.Println("Simple interest package initialized")
-}
+// func Example() {
+// 	str, err := ImageToString("img.jfif", 20, true)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	fmt.Println(str)
+// }
 
 func ImgDataToArray(imageData image.Image, height int, pixelSplit bool) ([]string, error) {
 	maxX := imageData.Bounds().Max.X
