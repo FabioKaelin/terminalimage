@@ -23,6 +23,10 @@ func Example() {
 	fmt.Println(str)
 }
 
+func init() {
+	fmt.Println("Simple interest package initialized")
+}
+
 func ImgDataToArray(imageData image.Image, height int, pixelSplit bool) ([]string, error) {
 	maxX := imageData.Bounds().Max.X
 	maxY := imageData.Bounds().Max.Y
