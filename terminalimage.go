@@ -64,7 +64,7 @@ func blockLine(imageData image.Image, PixelSize int, width int, XBlockSize int, 
 				sumB += int(b / 256)
 			}
 		}
-		lineResult += color.Sprintf("<fg=%d,%d,%d;bg=%d,%d,%d>█</>", int(float64(sumR)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumG)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumB)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumR)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumG)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumB)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))))
+		lineResult += color.Sprintf("<fg=%d,%d,%d;bg=%d,%d,%d>%s</>", int(float64(sumR)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumG)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumB)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumR)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumG)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), int(float64(sumB)/((float64(XBlockSize)/float64(PixelSize))*(float64(YBlockSize)))), strings.Repeat("█", PixelSize))
 	}
 	return lineResult
 }
