@@ -1,8 +1,8 @@
 # Terminal Image
 
-With this package can you display a image in your terminal.
+With this package can you display an image in your terminal.
 
-The height if the generated image is customizable.
+The height of the generated image is customizable.
 
 The supported image-types are png (.png), jpeg (.jpg, .jpeg, .jfif), singleframe gif (.gif) and webP (.webp).
 
