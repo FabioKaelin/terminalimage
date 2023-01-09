@@ -1,6 +1,10 @@
 package terminalimage
 
 import (
+	_ "embed"
+
+	"bytes"
+	"fmt"
 	"image"
 	"strings"
 
@@ -14,17 +18,20 @@ import (
 	_ "golang.org/x/image/webp"
 )
 
-// func init() {
-// 	fmt.Println("Simple interest package initialized")
-// }
+//go:embed docs/images/img.png
+var img []byte
 
-// func Example() {
-// 	str, err := ImageToString("img.jfif", 20, true)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	fmt.Println(str)
-// }
+func Example() {
+	imageData, _, err := image.Decode(bytes.NewReader(img))
+	if err != nil {
+		panic(err)
+	}
+	resultArray, err := ImgDataToArray(imageData, 61, true)
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(strings.Join(resultArray[:], "\n"))
+}
 
 func ImgDataToArray(imageData image.Image, height int, pixelSplit bool) ([]string, error) {
 	maxX := imageData.Bounds().Max.X
